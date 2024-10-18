@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HounSokha_Car Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #3498db;
+        }
+
+        canvas {
+            border: 1px solid #ccc;
+            background-color: white;
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Draw Basic Shapes Using Canvas</h1>
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Draw a rectangle
+        ctx.fillStyle = '#3498db'; // Fill color for the rectangle
+        ctx.fillRect(50, 50, 100, 50);
+
+        // Draw a circle
+        ctx.beginPath();
+        ctx.arc(250, 150, 40, 0, Math.PI * 2, false); // (x, y, radius, startAngle, endAngle)
+        ctx.fillStyle = '#e74c3c'; 
+        ctx.fill();
+
+        // Draw a line
+        ctx.beginPath();
+        ctx.moveTo(50, 250); // Start point
+        ctx.lineTo(350, 250); // End point
+        ctx.strokeStyle = '#2ecc71'; // Color for the line
+        ctx.lineWidth = 5; // Width of the line
+        ctx.stroke();
+    </script>
+
+</body>
+</html>
